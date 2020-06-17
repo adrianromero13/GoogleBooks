@@ -3,9 +3,10 @@ import React from 'react';
 
 
 const App = () => {
-    return (<div>
+    return (
+    <div>
         <h1>the google books app</h1>
-    </div>);
+    </div>)
 };
 
 export default App;

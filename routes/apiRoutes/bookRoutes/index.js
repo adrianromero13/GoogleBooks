@@ -1,6 +1,12 @@
 const router = require('express').Router();
 // import controller files
-const { findAll, create, update, findById, remove } = require('../../../controllers/bookController');
+const {
+  findAll,
+  create,
+  update,
+  findById,
+  remove,
+} = require('../../../controllers/bookController');
 
 // set up controller
 router.route('/')
