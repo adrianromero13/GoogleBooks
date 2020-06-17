@@ -12,8 +12,8 @@ import API from '../../utils';
 class HomePage extends Component {
   state = {
     books: [],
-    q: '',
-    message: 'Search Book Titles =] '
+    q: "",
+    message: "Search For A Book To Begin!"
   };
 
   handleInputChange = event => {
@@ -33,7 +33,7 @@ class HomePage extends Component {
       .catch(() =>
         this.setState({
           books: [],
-          message: 'No books found, try a searching something different'
+          message: "No New Books Found, Try a Different Query"
         })
       );
   };
@@ -44,8 +44,7 @@ class HomePage extends Component {
   };
 
   handleBookSave = id => {
-    const book = this.state.books
-      .find(book => book.id === id);
+    const book = this.state.books.find(book => book.id === id);
 
     API.saveBook({
       googleId: book.id,
@@ -63,16 +62,16 @@ class HomePage extends Component {
     return (
       <Container>
         <Row>
-          <Col size='md-12'>
+          <Col size="md-12">
             <Jumbotron>
-              <h1 className='text-center'>
-                <strong>Application: Google Books Search</strong>
+              <h1 className="text-center">
+                <strong>(React) Google Books Search</strong>
               </h1>
-              <h2 className='text-center'>Search for Books and Save Your Favorites</h2>
+              <h2 className="text-center">Search for and Save Books of Interest.</h2>
             </Jumbotron>
           </Col>
-          <Col size='md-12'>
-            <ContentBox title='Book Search' icon='far fa-book'>
+          <Col size="md-12">
+            <ContentBox title="Book Search" icon="far fa-book">
               <SearchForm
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
@@ -82,31 +81,33 @@ class HomePage extends Component {
           </Col>
         </Row>
         <Row>
-          <Col size='md-12'>
-            <ContentBox title='results'>
+          <Col size="md-12">
+            <ContentBox title="Results">
               {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (
                     <BookContent
-                      Key={book.id}
+                      key={book.id}
                       title={book.volumeInfo.title}
-                      subtitle={book.volumeInfo.infoLink}
-                      authors={book.volumeInfo.authors.join(', ')}
+                      subtitle={book.volumeInfo.subtitle}
+                      link={book.volumeInfo.infoLink}
+                      authors={book.volumeInfo.authors.join(", ")}
                       description={book.volumeInfo.description}
                       image={book.volumeInfo.imageLinks.thumbnail}
                       Button={() => (
                         <button
                           onClick={() => this.handleBookSave(book.id)}
-                          classNamee='btn btn-primary ml-2'
-                          content='Save'
-                        />
+                          className="btn btn-primary ml-2"
+                        >
+                          Save
+                        </button>
                       )}
                     />
                   ))}
                 </List>
               ) : (
-                  <h2 className='text-center'>{this.state.message}</h2>
-                )}
+                <h2 className="text-center">{this.state.message}</h2>
+              )}
             </ContentBox>
           </Col>
         </Row>

@@ -24,34 +24,31 @@ class SavedBooks extends Component {
       .then(res =>
         this.setState({
           books: res.data
-        }))
-      .catch(err => err);
+        })
+      )
+      .catch(err => console.log(err));
   };
 
   handleBookDelete = id => {
-    API.deleteBook(id)
-      .then(res => this.getSavedBooks());
+    API.deleteBook(id).then(res => this.getSavedBooks());
   };
 
   render() {
     return (
       <Container>
         <Row>
-          <Col size='md-12'>
+          <Col size="md-12">
             <Jumbotron>
-              <h1 className='text-center'>
-                <strong>Application: Google Books Search</strong>
+              <h1 className="text-center">
+                <strong>(React) Google Books Search</strong>
               </h1>
-              <h2 className='text-center'>Search for Books and Save Your Favorites</h2>
+              <h2 className="text-center">Search for and Save Books of Interest.</h2>
             </Jumbotron>
           </Col>
-        </Row >
+        </Row>
         <Row>
-          <Col size='md-12'>
-            <ContentBox
-              title='Saved Books'
-              icon='download'
-            >
+          <Col size="md-12">
+            <ContentBox title="Saved Books" icon="download">
               {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (
@@ -60,27 +57,28 @@ class SavedBooks extends Component {
                       title={book.title}
                       subtitle={book.subtitle}
                       link={book.link}
-                      authors={book.authors.join(', ')}
+                      authors={book.authors.join(", ")}
                       description={book.description}
                       image={book.image}
                       Button={() => (
                         <button
                           onClick={() => this.handleBookDelete(book._id)}
-                          className='btn btn-danger ml-2'
+                          className="btn btn-danger ml-2"
                         >
-                          Delete Book
+                          Delete
                         </button>
                       )}
                     />
                   ))}
                 </List>
               ) : (
-                  <h2 className='text-center'>No Books Saved</h2>
-                )}
+                <h2 className="text-center">No Saved Books</h2>
+              )}
             </ContentBox>
           </Col>
         </Row>
-      </Container >
+        <Footer />
+      </Container>
     );
   }
 }

@@ -3,28 +3,29 @@ import React from 'react';
 function SearchForm({ q, handleInputChange, handleFormSubmit }) {
   return (
     <form>
-      <div className='form-group'>
-        <label htmlFor='Query'>
+      <div className="form-group">
+        <label htmlFor="Query">
           <strong>Book</strong>
         </label>
         <input
-          className='form-control'
-          id='Title'
-          type='text'
+          className="form-control"
+          id="Title"
+          type="text"
           value={q}
-          placeholder='Enter Book Title'
-          name='q'
+          placeholder="Search by Title"
+          name="q"
           onChange={handleInputChange}
           required
         />
       </div>
-      <div className='pull-right'>
+      <div className="pull-right">
         <button
           onClick={handleFormSubmit}
-          type='submit'
-          className='bnt btn-lg btn-success float-right'
-          content='Search'
-        />
+          type="submit"
+          className="btn btn-lg btn-danger float-right"
+        >
+          Search
+        </button>
       </div>
     </form>
   );
