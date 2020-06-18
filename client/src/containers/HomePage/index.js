@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Col, Row, Container } from '../../components/Wrappers/Layout';
 import { List } from '../../components/Wrappers/List';
 import Jumbotron from '../../components/Wrappers/Jumbotron';
-import ContentBox from '../../components/BookContent';
+import ContentBox from '../../components/ContentBox';
 import SearchForm from '../../components/SearchForm';
 import BookContent from '../../components/BookContent';
 import Footer from '../../components/Footer';
@@ -33,7 +33,7 @@ class HomePage extends Component {
       .catch(() =>
         this.setState({
           books: [],
-          message: "No Books Found, Try a Different Search"
+          message: "No book found, try a different search"
         })
       );
   };
@@ -58,16 +58,15 @@ class HomePage extends Component {
   };
 
   render() {
-    console.log('HomePage State', this.state);
     return (
       <Container>
         <Row>
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>Google Books Search</strong>
+                <strong>(React) Google Books Search</strong>
               </h1>
-              <h2 className="text-center">Search and Save Book Titles.</h2>
+              <h2 className="text-center">Search for and Save Books of Interest.</h2>
             </Jumbotron>
           </Col>
           <Col size="md-12">
@@ -82,8 +81,8 @@ class HomePage extends Component {
         </Row>
         <Row>
           <Col size="md-12">
-            {/* <ContentBox title="Results"> */}
-              {/* {this.state.books.length ? (
+            <ContentBox title="Results">
+              {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (
                     <BookContent
@@ -99,7 +98,7 @@ class HomePage extends Component {
                           onClick={() => this.handleBookSave(book.id)}
                           className="btn btn-primary ml-2"
                         >
-                          Save Book
+                          Save
                         </button>
                       )}
                     />
@@ -107,8 +106,8 @@ class HomePage extends Component {
                 </List>
               ) : (
                 <h2 className="text-center">{this.state.message}</h2>
-              )} */}
-            {/* </ContentBox> */}
+              )}
+            </ContentBox>
           </Col>
         </Row>
         <Footer />

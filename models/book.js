@@ -28,6 +28,11 @@ const BookSchema = new Schema({
     required: true,
     unique: true,
   },
+  googleId: {
+    type: String,
+    required: true,
+    unique: true,
+  }
 });
 
 module.exports = model('Book', BookSchema);

@@ -14,11 +14,11 @@ function App() {
       <div>
         <p>is app working?</p>
         <Nav />
-        {/* <Switch> */}
+        <Switch>
            <Route exact path="/" component={HomePage} />
-          {/* <Route exact path="/saved" component={SavedBooks} /> */}
+          <Route exact path="/saved" component={SavedBooks} />
           <Route component={MessageUI} />
-        {/* </Switch> */}
+        </Switch>
       </div>
     </Router>
   );
