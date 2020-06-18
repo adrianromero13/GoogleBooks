@@ -1,3 +1,7 @@
+.customBackgroundDiv {
+  background-color: rgb(108, 108, 108) !important;
+}
+
 .btn-container {
   float: right;
 }
@@ -6,4 +10,29 @@
     .btn-container {
     margin-bottom: 15px;
   }
+}
+
+.customPadding {
+ margin: 0 6%; 
+ text-shadow: 0.5px 0.5px black;
+}
+
+.customJumbotron {
+  color: #191919;
+  background-color: rgb(126, 235, 215);
+  max-height: fit-content;
+}
+
+#customNav {
+  background-color: rgb(126, 235, 215) !important;
+}
+
+.customText {
+  /* font-style: italic; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 1px 1px 1px darkgray;
+}
+
+.customRow {
+  background-color: darkgray;
 }

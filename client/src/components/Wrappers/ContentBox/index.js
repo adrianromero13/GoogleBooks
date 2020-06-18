@@ -1,9 +1,8 @@
 import React from 'react';
 
 function ContentBox({ icon, title, children }) {
-  console.log('children', children);
   return (
-    <div className="card mt-4">
+    <div className="card mt-4 customJumbotron">
       <div className="card-header">
         <h3>
           <strong>

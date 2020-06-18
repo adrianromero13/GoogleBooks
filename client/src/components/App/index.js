@@ -7,12 +7,13 @@ import SavedBooks from '../../containers/SavedBooks';
 import MessageUI from '../../containers/MessageUI';
 import Nav from '../../containers/Nav';
 
+import '../../assets/styles.css';
+
 
 function App() {
   return (
     <Router>
-      <div>
-        <p>is app working?</p>
+      <div className='customBackgroundDiv'>
         <Nav />
         <Switch>
            <Route exact path="/" component={HomePage} />
