@@ -12,15 +12,16 @@ function App() {
   return (
     <Router>
       <div>
+        <p>is app working?</p>
         <Nav />
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/saved' component={SavedBooks} />
+        {/* <Switch> */}
+           <Route exact path="/" component={HomePage} />
+          {/* <Route exact path="/saved" component={SavedBooks} /> */}
           <Route component={MessageUI} />
-        </Switch>
+        {/* </Switch> */}
       </div>
     </Router>
-  )
+  );
 }
 
 export default App;

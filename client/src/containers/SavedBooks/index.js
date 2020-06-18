@@ -8,7 +8,6 @@ import BookContent from '../../components/BookContent';
 import Footer from '../../components/Footer';
 
 import API from '../../utils';
-import SearchForm from '../../components/SearchForm';
 
 class SavedBooks extends Component {
   state = {
@@ -49,7 +48,7 @@ class SavedBooks extends Component {
         <Row>
           <Col size="md-12">
             <ContentBox title="Saved Books" icon="download">
-              {this.state.books.length ? (
+              {/* {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (
                     <BookContent
@@ -73,7 +72,7 @@ class SavedBooks extends Component {
                 </List>
               ) : (
                 <h2 className="text-center">No Saved Books</h2>
-              )}
+              )} */}
             </ContentBox>
           </Col>
         </Row>

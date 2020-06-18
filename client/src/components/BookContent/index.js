@@ -5,6 +5,7 @@ import { Row, Col } from '../Wrappers/Layout';
 
 import '../../assets/styles.css';
 
+
 function BookContent({ title, subtitle, authors, link, description, image, Button }) {
   return (
     <ListItem>
@@ -24,7 +25,7 @@ function BookContent({ title, subtitle, authors, link, description, image, Butto
       </Row>
       <Row>
         <Col size="md-6">
-          <p className="font-italic small">Written by {authors}</p>
+          <p className="font-italic small">Author(s): {authors}</p>
         </Col>
       </Row>
       <Row>

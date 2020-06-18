@@ -33,7 +33,7 @@ class HomePage extends Component {
       .catch(() =>
         this.setState({
           books: [],
-          message: "No New Books Found, Try a Different Query"
+          message: "No Books Found, Try a Different Search"
         })
       );
   };
@@ -65,9 +65,9 @@ class HomePage extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>(React) Google Books Search</strong>
+                <strong>Google Books Search</strong>
               </h1>
-              <h2 className="text-center">Search for and Save Books of Interest.</h2>
+              <h2 className="text-center">Search and Save Book Titles.</h2>
             </Jumbotron>
           </Col>
           <Col size="md-12">
@@ -82,8 +82,8 @@ class HomePage extends Component {
         </Row>
         <Row>
           <Col size="md-12">
-            <ContentBox title="Results">
-              {this.state.books.length ? (
+            {/* <ContentBox title="Results"> */}
+              {/* {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (
                     <BookContent
@@ -99,7 +99,7 @@ class HomePage extends Component {
                           onClick={() => this.handleBookSave(book.id)}
                           className="btn btn-primary ml-2"
                         >
-                          Save
+                          Save Book
                         </button>
                       )}
                     />
@@ -107,8 +107,8 @@ class HomePage extends Component {
                 </List>
               ) : (
                 <h2 className="text-center">{this.state.message}</h2>
-              )}
-            </ContentBox>
+              )} */}
+            {/* </ContentBox> */}
           </Col>
         </Row>
         <Footer />
