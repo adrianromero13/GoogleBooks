@@ -44,16 +44,15 @@ The second feature this application has is to *view* the book using google's bro
 
 ---
 Book Search using the View button
-
----
 ![ViewFunctionality](./client/src/assets/images/View.png)
 ---
 
+---
 The third functionality is the Save/Delete feature of the application. Once you found what you were looking for but decided that it is not the time to view the book yet, simply just click the ***Save*** button and the application will save the information in a mongo database and render it in the **Saved** section of the application. 
 
----
 ![SaveFunctionality](./client/src/assets/images/Saved.png)
-![DeleteFunctionality](./client/src/assets/images/saved(2).png)
+
+![DeleteFunctionality](./client/src/assets/images/saved2.png)
 ---
 
 Once you are ready to remove this book from the database, then simply click the ***Delete*** button on the application and the book's information will be removed from the database and re-render the new list of books for you to view.
