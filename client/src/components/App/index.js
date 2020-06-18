@@ -16,7 +16,7 @@ function App() {
       <div className='customBackgroundDiv'>
         <Nav />
         <Switch>
-           <Route exact path="/" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/saved" component={SavedBooks} />
           <Route component={MessageUI} />
         </Switch>
