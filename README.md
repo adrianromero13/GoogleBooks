@@ -42,15 +42,15 @@ To use simply type any title in mind on the **Search Input** and click the ***Se
 ---
 The second feature this application has is to *view* the book using google's browser. By clicking the ***View*** button, the application will open up a new tab with the book's title as the search query
 
----
 Book Search using the View button
-![ViewFunctionality](./client/src/assets/images/View.png)
+---
+![ViewFunctionality](./client/src/assets/images/view.png)
 ---
 
 ---
 The third functionality is the Save/Delete feature of the application. Once you found what you were looking for but decided that it is not the time to view the book yet, simply just click the ***Save*** button and the application will save the information in a mongo database and render it in the **Saved** section of the application. 
 
-![SaveFunctionality](./client/src/assets/images/Saved.png)
+![SaveFunctionality](./client/src/assets/images/saved.png)
 
 ![DeleteFunctionality](./client/src/assets/images/saved2.png)
 ---
